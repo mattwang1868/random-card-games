@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 import io.github.mattwang1868.carddeck.*;
-public class WarEngine {
+public class WarEngine34P {
 
     /**
      * Draws each side's cards, determines who wins, then gives the prize pool
@@ -118,7 +118,7 @@ public class WarEngine {
         starting.shuffle();
         int currentPlayer = 0;
         while (starting.size() > 0) {
-            currentPlayer %= 4;
+            currentPlayer %= numPlayers;
             players.get(currentPlayer).addCard(starting.draw());
             currentPlayer++;
         }
