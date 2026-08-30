@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: io.github.mattwang18681.AppTest
+Test set: io.github.mattwang1868.WarGameTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in io.github.mattwang18681.AppTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in io.github.mattwang1868.WarGameTest

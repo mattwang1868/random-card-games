@@ -5,13 +5,12 @@ import java.util.ArrayList;
 import io.github.mattwang1868.carddeck.*;
 
 /**
- * Class that simulates a turn in the card game War with 2 players.
+ * Class that simulates mechanics in the card game War with 2 players.
  */
 public class WarEngine2P {
 
     final private static int NUMPLAYERS = 2;
-    private static Scanner input = new Scanner(System.in);
-
+    final private static Scanner INPUT = new Scanner(System.in);
     /**
      * Draws each side's cards, determines who wins, then gives the prize pool
      * to the winner.
@@ -45,7 +44,7 @@ public class WarEngine2P {
      * Waits for the user to hit the return key.
      */
     public static void waitForInput() {
-        input.nextLine();
+        INPUT.nextLine();
         //System.out.println();
     }
 
@@ -113,7 +112,6 @@ public class WarEngine2P {
         System.out.println("War!");
         CardStack p1 = state.get(0);
         CardStack p2 = state.get(1);
-        int counter = 0;
         Card p1Card, p2Card;
         //draw 3 cards or until only 1 card is left for each side
         for (int i = 0; i < 3; i++) {
@@ -173,6 +171,7 @@ public class WarEngine2P {
             }
         }
         System.out.println();
+        waitForInput();
     }
     
     /**
