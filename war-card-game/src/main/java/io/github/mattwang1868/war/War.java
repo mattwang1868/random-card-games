@@ -84,8 +84,9 @@ public class War {
                     System.out.println("Player 4 Wins!");
                 }
             } else {
-                //in the case where 3000 turns are reached
+                //in the case where max turns are reached
                 System.out.println(MAXTURNS + " turns reached");
+                //store the stack sizes for all players
                 List<Integer> allSizes = new ArrayList<>();
                 allSizes.add(0, players.get(0).size());
                 allSizes.add(1, players.get(1).size());
@@ -93,7 +94,7 @@ public class War {
                 if (numPlayers == 4) {
                     allSizes.add(3, players.get(3).size());
                 }
-
+                //find the largest stack(s)
                 List<Integer> winners = new ArrayList<>();
                 int max = -1;
                 for (int i = 0; i < numPlayers; i++) {
@@ -107,10 +108,11 @@ public class War {
                         winners.add(i);
                     }
                 }
-
+                //for if one stack is the largest
                 if (winners.size() == 1) {
                     System.out.println("Player " + (winners.get(0) + 1) + " wins due to having the most cards.");
                 } else {
+                    //for ties
                     System.out.print("It's a tie between Players");
                     for (int i = 0; i < winners.size(); i++) {
                         System.out.print(" " + (winners.get(i) + 1));
